@@ -1,0 +1,101 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Carta */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff6f61;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Botón */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff6f61;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #ff3b3f;
+}
+
+/* Corazón animado */
+.heart {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #ff6f61;
+    transform: rotate(-45deg);
+    margin: 20px auto;
+    border-radius: 50%;
+    animation: float 2s ease-in-out infinite;
+}
+
+.heart::before, .heart::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #ff6f61;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -35px;
+    left: 0;
+}
+
+.heart::after {
+    left: 35px;
+    top: 0;
+}
+
+/* Ocultar sorpresa */
+.hidden {
+    display: none;
+}
+
+/* Animación del corazón */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
