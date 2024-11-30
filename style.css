@@ -20,8 +20,6 @@ body {
     width: 90%;
     max-width: 400px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
 .card h1 {
@@ -54,51 +52,6 @@ button:hover {
     background: #ff3b3f;
 }
 
-/* Corazón animado */
-.heart {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle at center, #ff6f61, #ff3b3f);
-    transform: rotate(-45deg);
-    margin: 20px auto;
-    border-radius: 50%;
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 60px rgba(255, 0, 0, 0.4);
-    animation: pulse 1.5s infinite ease-in-out;
-    display: none;
-}
-
-.heart::before, .heart::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: inherit;
-    border-radius: 50%;
-}
-
-.heart::before {
-    top: -50px;
-    left: 0;
-}
-
-.heart::after {
-    left: 50px;
-    top: 0;
-}
-
-/* Animaciones */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1) rotate(-45deg);
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 60px rgba(255, 0, 0, 0.4);
-    }
-    50% {
-        transform: scale(1.2) rotate(-45deg);
-        box-shadow: 0 0 50px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 0, 0, 0.6);
-    }
-}
-
 /* Mensaje oculto */
 .hidden-message {
     display: none;
@@ -108,11 +61,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* Ocultar por defecto */
-.hidden {
-    display: none;
-}
-
 .visible {
     display: block;
 }
+
